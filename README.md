@@ -14,14 +14,14 @@ statusCards: StatusCard[] = [
   {
     id: 'total-missions',
     title: 'Total Missions',
-    quantity: 8,
+    value: 8,
   },
   ...
 ];
 ```
 
 ### 2. Wygeneruj karty za pomocą `@for`
-- Usuń ręcznie dodane instancje `CardComponent`.
+- Usuń ręcznie dodane instancje komponentu `Card`.
 - Wykorzystaj `@for`, aby wygenerować wszystkie karty na podstawie tablicy.
 - 💡 Dodanie nowej karty powinno wymagać jedynie dopisania kolejnego elementu do tablicy.
 
@@ -30,14 +30,14 @@ Podczas iteracji wykorzystaj właściwość `id` jako identyfikator elementu.
 
 💡 `track` pomaga Angularowi efektywnie aktualizować widok.
 
-### 4. Ukryj panel akcji
-- Obecnie panel akcji jest widoczny przez cały czas.
-- Wyświetlaj go tylko wtedy, gdy użytkownik wybierze kartę.
+### 4. Wyświetlaj wybraną kartę warunkowo
+- Obecnie informacja `Card selected: ...` jest widoczna przez cały czas.
+- Wyświetlaj ją tylko wtedy, gdy użytkownik wybierze kartę.
 - Wykorzystaj `@if`.
 
 ### 5. Dodaj blok `@else`
-- Jeżeli żadna karta nie została wybrana, wyświetl komunikat: “Select a status card to see available actions.”
-- Po wybraniu karty wyświetl panel z odpowiednimi akcjami.
+- Jeżeli żadna karta nie została wybrana, wyświetl komunikat: "Select a card to see available actions."
+- Po wybraniu karty wyświetl informację o wybranej karcie.
 - 💡 Dzięki `@else` użytkownik zawsze otrzymuje informację o aktualnym stanie aplikacji.
 
 ## Jak zacząć
